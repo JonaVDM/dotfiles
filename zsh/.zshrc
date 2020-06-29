@@ -2,6 +2,9 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# Export android tools and flutter
+export PATH=$PATH:$HOME/development/flutter/bin:$HOME/development/android-tools/tools/bin
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -78,6 +81,9 @@ alias gap='git add -p'
 alias glogg='gloga'
 alias goops='git checkout HEAD --'
 alias git='hub'
+
+# Python alias
+alias py="python3"
 
 # Remove the username so it doesnt show up in front of the path
 USER=``
