@@ -85,5 +85,14 @@ alias git='hub'
 # Python alias
 alias py="python3"
 
+# Node.JS
+alias ns="npm start"
+alias nw="npm run watch"
+alias nt="npm test"
+alias ni="npm install"
+
+# Editor
+alias co="code ."
+
 # Remove the username so it doesnt show up in front of the path
 USER=``
