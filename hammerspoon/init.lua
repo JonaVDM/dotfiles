@@ -45,9 +45,19 @@ hs.hotkey.bind(placid, 'T', function()
   hs.application.open('iTerm')
 end)
 
--- Open the terminal (like ctrl + alt + t on linux)
+-- Open spotify
 hs.hotkey.bind(placid, 'S', function()
   hs.application.open('Spotify')
+end)
+
+-- Open VS-Code
+hs.hotkey.bind(placid, 'C', function()
+  hs.application.open('Visual Studio Code')
+end)
+
+-- Open Browser (Firefox)
+hs.hotkey.bind(placid, 'B', function()
+  hs.application.open('Firefox')
 end)
 
 -- Awesome WIFI tools
