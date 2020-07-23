@@ -61,7 +61,7 @@ hs.hotkey.bind(placid, 'B', function()
 end)
 
 -- Awesome WIFI tools
--- require('SelfSpoons/WifiWatcher')
+require('SelfSpoons/WifiWatcher')
 
 -- Reload automatically
 require('SelfSpoons/Reloader')

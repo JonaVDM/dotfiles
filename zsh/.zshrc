@@ -3,7 +3,11 @@ export ZSH="$HOME/.oh-my-zsh"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # Export android tools and flutter
-export PATH=$PATH:$HOME/development/flutter/bin:$HOME/development/android-tools/tools/bin
+PATH=$PATH:$HOME/development/flutter/bin
+PATH=$PATH:$HOME/Library/Android/sdk/tools/bin
+PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+export PATH
+export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -93,6 +97,10 @@ alias ni="npm install"
 
 # Editor
 alias co="code ."
+
+# Alias for getting the ip address
+alias ip="ipconfig getifaddr en0"
+alias ipc="ifconfig | grep \"inet \""
 
 # Remove the username so it doesnt show up in front of the path
 USER=``

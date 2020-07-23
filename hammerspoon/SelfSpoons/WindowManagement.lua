@@ -5,8 +5,8 @@ local hyper = hyper or {"ctrl", "alt", "cmd"}
 
 -- Set current frontmostWindow to full-screen
 hs.hotkey.bind(placid, "return", function()
-  local win = hs.window.frontmostWindow()
-  win:setFullscreen(not win:isFullscreen())
+   local win = hs.window.frontmostWindow()
+   win:setFullscreen(not win:isFullscreen())
 end)
 
 -- Move windows around spaces
@@ -72,20 +72,20 @@ function moveWindowOneSpace(dir)
 end
 
 -- function removeSpace()
---   local spaceUuid = spaces.activeSpace()
---   local currentScreen = hs.screen.mainScreen()
+--    local spaceUuid = spaces.activeSpace()
+--    local currentScreen = hs.screen.mainScreen()
 
---   -- local userSpaces=spaces.layout()[uuid]
+--    -- local userSpaces=spaces.layout()[uuid]
 
---   -- spaces.removeSpace(uuid)
---   error(currentScreen.id, 0)
+--    spaces.removeSpace(spaceUuid)
+--    -- error(currentScreen.id, 0)
 -- end
 
 hotkey.bind(hyper, "L",nil,
-      function() moveWindowOneSpace("right") end)
+   function() moveWindowOneSpace("right") end)
 hotkey.bind(hyper, "H",nil,
-      function() moveWindowOneSpace("left") end)
+   function() moveWindowOneSpace("left") end)
 hotkey.bind(hyper, "N", nil,
-      function() spaces.createSpace() end)
+   function() spaces.createSpace() end)
 -- hotkey.bind(hyper, "X", nil,
---       function() removeSpace() end)
+--    function() removeSpace() end)
