@@ -102,5 +102,8 @@ alias co="code ."
 alias ip="ipconfig getifaddr en0"
 alias ipc="ifconfig | grep \"inet \""
 
+# Alias to open current directory in finder
+alias op="open ."
+
 # Remove the username so it doesnt show up in front of the path
 USER=``

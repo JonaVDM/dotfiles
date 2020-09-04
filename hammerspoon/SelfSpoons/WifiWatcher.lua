@@ -18,7 +18,7 @@ function ssidChangedCallback()
         if headphones ~= nil then
             headphones:setVolume(40)
         end
-        hs.audiodevice.findOutputByName(speakers):setVolume(70)
+        hs.audiodevice.findOutputByName(speakers):setVolume(35)
         hs.notify.new({title=title, informativeText="Connected to Home WIFI"}):send()
 
     elseif newSSID == schoolSSID and lastSSID ~= schoolSSID then
@@ -36,7 +36,7 @@ function ssidChangedCallback()
         if headphones ~= nil then
             headphones:setVolume(40)
         end
-        hs.notify.new({title=title, informativeText="Connected to School WIFI"}):send()
+        hs.notify.new({title=title, informativeText="Connected to my Hotspot"}):send()
 
     elseif newSSID == nil and lastSSID ~= nil then
         -- We just lost WIFI network

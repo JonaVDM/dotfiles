@@ -1,6 +1,7 @@
 # Link dotfiles
 ln -s ./zsh/.zshrc ~
 ln -s ./hammerspoon ~/.hammerspoon
+ln -s ~/dotfiles/nvim ~/.config
 
 # Install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
