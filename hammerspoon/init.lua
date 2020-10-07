@@ -42,7 +42,7 @@ spoon.Caffeine:start()
 
 -- Open the terminal (like ctrl + alt + t on linux)
 hs.hotkey.bind(placid, 'T', function()
-  hs.application.open('iTerm')
+  hs.application.open('alacritty')
 end)
 
 -- Open spotify

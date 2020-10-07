@@ -107,7 +107,7 @@ alias ipc="ifconfig | grep \"inet \""
 alias op="open ."
 
 # Alias to open neovim a bit faster, because I'm super lazy
-alias v="nvim"
+alias v="nvim ."
 
 # Just a stupid shortcut
 alias mines="terminal-mines -w 80 -h 18"
