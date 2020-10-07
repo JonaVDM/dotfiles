@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/jona/code/web-template-frontend/src/api'
+let g:netrw_dirhist_2='/Users/jona/code/web-template-frontend/src'
+let g:netrw_dirhist_1='/Users/jona/code/web-template-frontend'
+let g:netrw_dirhist_0='/Users/jona/code/web-template-frontend/public'
+let g:netrw_dirhist_9='/Users/jona/code/web-template-frontend'
+let g:netrw_dirhist_8='/Users/jona/dotfiles/zsh'
+let g:netrw_dirhist_7='/Users/jona/dotfiles'
+let g:netrw_dirhist_6='/Users/jona/dotfiles/nvim'
+let g:netrw_dirhist_5='/Users/jona/code/web-template-frontend/src/api'
+let g:netrw_dirhist_4='/Users/jona/code/web-template-frontend/src'

@@ -94,6 +94,7 @@ alias ns="npm start"
 alias nw="npm run watch"
 alias nt="npm test"
 alias ni="npm install"
+alias nr="npm run"
 
 # Editor
 alias co="code ."
@@ -104,6 +105,12 @@ alias ipc="ifconfig | grep \"inet \""
 
 # Alias to open current directory in finder
 alias op="open ."
+
+# Alias to open neovim a bit faster, because I'm super lazy
+alias v="nvim"
+
+# Just a stupid shortcut
+alias mines="terminal-mines -w 80 -h 18"
 
 # Remove the username so it doesnt show up in front of the path
 USER=``
