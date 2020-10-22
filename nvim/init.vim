@@ -1,6 +1,3 @@
-set number
-set cursorline
-
 filetype plugin on
 
 " set global leader
@@ -8,3 +5,8 @@ let mapleader = " "
 
 " Source the plugins
 source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/standarts.vim
+source ~/.config/nvim/secrets.vim
+
+nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+

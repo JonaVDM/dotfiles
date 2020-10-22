@@ -28,6 +28,9 @@ set noshowmode
 " Git commands in vim! Why is this not a default thing
 Plug 'tpope/vim-fugitive'
 
+" Git changes in vim!
+Plug 'airblade/vim-gitgutter'
+
 " Control :P
 Plug 'ctrlpvim/ctrlp.vim'
 " Ignore things that are in the gitignore
@@ -51,5 +54,20 @@ Plug 'HendrikPetertje/vimify'
 
 " Custom icons, says on the website that this should be called last
 Plug 'ryanoasis/vim-devicons'
+
+" Editor config
+Plug 'editorconfig/editorconfig-vim'
+
+" Install color scheme
+Plug 'altercation/vim-colors-solarized'
+
+" Quickly rename the file you're working in
+Plug 'danro/rename.vim'
+
+" Emmet Plugin, can't live life without this wonder
+Plug 'mattn/emmet-vim'
+
+" Auto close tags
+Plug 'Raimondi/delimitMate'
 
 call plug#end()
