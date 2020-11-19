@@ -42,6 +42,17 @@ Plug 'ycm-core/YouCompleteMe'
 " Fancy colors on the file tree
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+" Speed up nerdTree syntax highlight a bit
+let g:NERDTreeSyntaxEnabledExtensions = [
+      \ '.bmp', '.c', '.coffee', '.cpp', '.css', '.erb', '.go', '.html', '.java',
+      \ '.jpg', '.js', '.json', '.jsx',  '.markdown', '.md', '.php', '.png', '.pl',
+      \ '.py', '.rb', '.rs', '.scala', '.scss', 'sass', '.sh', '.sql', '.vim',
+      \ '.erb', '.exs', 'ex', '.tsx', '.ts'
+      \ ]
+
+ " enables folder icon highlighting using exact match
+let g:NERDTreeHighlightFolders = 1
+
 " syntax support for some things
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'

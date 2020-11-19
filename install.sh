@@ -2,6 +2,8 @@
 ln -s ./zsh/.zshrc ~
 ln -s ./hammerspoon ~/.hammerspoon
 ln -s ~/dotfiles/nvim ~/.config
+ln -s ~/dotfiles/powerline ~/.config/powerline
+ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 # Install brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"

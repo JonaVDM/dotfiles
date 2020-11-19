@@ -7,6 +7,7 @@ set ruler
 set wildmenu
 set autoindent
 set colorcolumn=80
+set scrolloff=5
 
 let g:solarized_termcolors=256
 syntax enable

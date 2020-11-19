@@ -1,0 +1,6 @@
+{
+  "cmmon": {
+    "log_file": "~/powerlog",
+    "log_level": "DEBUG"
+  }
+}
