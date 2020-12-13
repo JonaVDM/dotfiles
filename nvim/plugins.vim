@@ -1,10 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'preservim/nerdtree'
-let NERDTreeShowHidden=1
-autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <C-b> :NERDTreeToggle<CR>
-nmap <leader>p :NERDTreeFind<CR>
+source ~/.config/nvim/plugins/sidebar.vim
+source ~/.config/nvim/plugins/syntax.vim
+source ~/.config/nvim/plugins/complete.vim
 
 " Plugin airline, adds in fancy bar at the bottom
 Plug 'vim-airline/vim-airline'
@@ -23,8 +21,6 @@ let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_close_button = 0
 
-set noshowmode
-
 " Git commands in vim! Why is this not a default thing
 Plug 'tpope/vim-fugitive'
 
@@ -35,36 +31,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 " Ignore things that are in the gitignore
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
-" You Comlete me!
-Plug 'ycm-core/YouCompleteMe'
-
-" Fancy colors on the file tree
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
-" Speed up nerdTree syntax highlight a bit
-let g:NERDTreeSyntaxEnabledExtensions = [
-      \ '.bmp', '.c', '.coffee', '.cpp', '.css', '.erb', '.go', '.html', '.java',
-      \ '.jpg', '.js', '.json', '.jsx',  '.markdown', '.md', '.php', '.png', '.pl',
-      \ '.py', '.rb', '.rs', '.scala', '.scss', 'sass', '.sh', '.sql', '.vim',
-      \ '.erb', '.exs', 'ex', '.tsx', '.ts'
-      \ ]
-
- " enables folder icon highlighting using exact match
-let g:NERDTreeHighlightFolders = 1
-
-" syntax support for some things
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'mmalecki/vim-node.js'
+set wildignore+=*/.git/*,*/node_modules/*
 
 " Spotify
 Plug 'HendrikPetertje/vimify'
-
-" Custom icons, says on the website that this should be called last
-Plug 'ryanoasis/vim-devicons'
 
 " Editor config
 Plug 'editorconfig/editorconfig-vim'
@@ -78,7 +48,21 @@ Plug 'danro/rename.vim'
 " Emmet Plugin, can't live life without this wonder
 Plug 'mattn/emmet-vim'
 
+" Make it so tab complets emmet and does noramal tab things
+" let g:user_emmet_expandabbr_key='<Leader><Tab>'
+" imap <leader><tab> emmet#expandAbbrIntelligent("\<tab>")
+
 " Auto close tags
 Plug 'Raimondi/delimitMate'
+
+" Forgetting what the comment sign was? Couldn't be me, but this is for just
+" incase of that one person
+Plug 'preservim/nerdcommenter'
+
+let g:NERDSpaceDelims = 1
+let g:NERDCreateDefaultMappings = 0
+
+nmap <leader>, <plug>NERDCommenterInvert 
+xmap <leader>, <plug>NERDCommenterInvert 
 
 call plug#end()

@@ -1,26 +1,48 @@
 {
-    "segments": {
-        "right": [
-           {
-                "args": {
-                    "gamify": false 
-                },
-                "function": "powerline.segments.common.bat.battery"
-            },
-            {
-                "function": "powerline.segments.common.time.date"
-            },
-            {
-                "args": {
-                    "format": "%H:%M",
-                    "istime": true
-                },
-                "function": "powerline.segments.common.time.date",
-                "name": "time"
-            },
-            {
-                "function": "powerline.segments.common.net.hostname"
-            }
-        ]
-    }
+	"segments": {
+		"right": [
+			{
+				"function": "powerline.segments.common.sys.uptime",
+				"priority": 50
+			},
+			{
+				"function": "powerline.segments.common.time.date"
+			},
+			{
+				"function": "powerline.segments.common.time.date",
+				"name": "time",
+				"args": {
+					"format": "%H:%M",
+					"istime": true
+				}
+			},
+      {
+        "function": "powerline_owmweather.weather",
+        "args": {
+          "openweathermap_api_key": "4f09ba9a94cb02c9a84568154db3c864",
+          "location_query": "Groningen, NL"
+        }
+      }
+		],
+    "left": [
+      {
+        "function": "powerline.segments.common.net.hostname",
+        "args": {
+          "only_if_ssh": true
+        }
+      },
+      {
+        "function": "powerline.segments.common.net.external_ip"
+      },
+      {
+        "function": "powerline.segments.common.net.internal_ip",
+        "args": {
+          "interface": "default_gateway"
+        }
+      },
+      {
+        "function": "powerline.segments.common.net.network_load"
+      }
+    ]
+	}
 }
