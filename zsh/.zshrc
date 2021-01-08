@@ -114,3 +114,8 @@ alias mines="terminal-mines -w 80 -h 18"
 
 # Remove the username so it doesnt show up in front of the path
 USER=``
+
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+# Add Rust to path
+export PATH="/Users/jona/.cargo/bin:$PATH"

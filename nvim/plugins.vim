@@ -14,17 +14,12 @@ let g:airline_solarized_bg='dark'
 let g:airline#extensions#branch#enabled = 1
 
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#tabs_label = 'Hello'
-let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#tabline#show_splits = 0
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#show_close_button = 0
 
-" Git commands in vim! Why is this not a default thing
+" Git commands
 Plug 'tpope/vim-fugitive'
 
-" Git changes in vim!
+" Git changes
 Plug 'airblade/vim-gitgutter'
 
 " Control :P
@@ -39,8 +34,8 @@ Plug 'HendrikPetertje/vimify'
 " Editor config
 Plug 'editorconfig/editorconfig-vim'
 
-" Install color scheme
-Plug 'altercation/vim-colors-solarized'
+" Color Theme
+Plug 'morhetz/gruvbox'
 
 " Quickly rename the file you're working in
 Plug 'danro/rename.vim'
@@ -64,5 +59,8 @@ let g:NERDCreateDefaultMappings = 0
 
 nmap <leader>, <plug>NERDCommenterInvert 
 xmap <leader>, <plug>NERDCommenterInvert 
+
+" Go lang support
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()

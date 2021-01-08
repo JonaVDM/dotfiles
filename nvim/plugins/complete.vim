@@ -8,6 +8,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
+  \ 'coc-go',
   \ ]
 
 function! s:check_back_space() abort

@@ -23,14 +23,13 @@ else
   set signcolumn=yes
 endif
 
-let g:solarized_termcolors=256
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 
-set ts=2                " number of spaces in a tab
-set sw=2                " number of spaces for indent
-set et                  " expand tabs into spaces
+set ts=4
+set sw=4
+set et
 
-highlight! link SignColumn LineNr
+" highlight! link SignColumn LineNr
 
