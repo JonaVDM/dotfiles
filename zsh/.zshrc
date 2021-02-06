@@ -46,7 +46,7 @@ eval $(thefuck --alias shit)
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git thefuck github lol zsh-autosuggestions docker-compose)
+plugins=(git thefuck github lol zsh-autosuggestions docker-compose vscode yarn npm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -56,13 +56,6 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -96,9 +89,6 @@ alias nt="npm test"
 alias ni="npm install"
 alias nr="npm run"
 
-# Editor
-alias co="code ."
-
 # Alias for getting the ip address
 alias ip="ipconfig getifaddr en0"
 alias ipc="ifconfig | grep \"inet \""
@@ -119,3 +109,6 @@ export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
 # Add Rust to path
 export PATH="/Users/jona/.cargo/bin:$PATH"
+
+[[ -s "/Users/jona/.gvm/scripts/gvm" ]] && source "/Users/jona/.gvm/scripts/gvm"
+export PATH="$PATH:$(go env GOPATH)/bin"

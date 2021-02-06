@@ -1,6 +1,3 @@
 {
-  "common": {
-    "log_file": "~/powerlog",
-    "log_level": "DEBUG"
-  }
+  "common": {}
 }
