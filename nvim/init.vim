@@ -25,6 +25,12 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Show a fancy bar
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme="simple"
+let g:airline_powerline_fonts=1
+let g:airline#extensions#branch#enabled=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#show_splits=0
 
 " Show git changes in a file
 Plug 'airblade/vim-gitgutter'
@@ -47,9 +53,9 @@ nmap <silent>, <plug>NERDCommenterInvert
 xmap <silent>, <plug>NERDCommenterInvert 
 
 " Language support/syntax
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-" let g:go_fmt_command = "goimports"
-" let g:go_def_mapping_enabled = 0
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+let g:go_fmt_command = "goimports"
+let g:go_def_mapping_enabled = 0
 Plug 'pangloss/vim-javascript'
 Plug 'mmalecki/vim-node.js'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -64,6 +70,7 @@ let g:coc_global_extensions = [
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
+  \ 'coc-go',
   \ ]
   " \ 'coc-go',
 
@@ -88,7 +95,7 @@ nmap <silent> gr <Plug>(coc-references)
 Plug 'preservim/nerdtree'
 let NERDTreeShowHidden=1
 autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-nmap <silent>P :NERDTreeFind<CR>
+nmap <silent> <s-p> :NERDTreeFind<CR>
 let g:NERDTreeIgnore = ['^node_modules$']
 
 function! IsNERDTreeOpen()        
@@ -103,7 +110,7 @@ function! SyncTree()
 endfunction
 
 " Highlight currently open buffer in NERDTree
-autocmd BufEnter * call SyncTree()
+" autocmd BufEnter * call SyncTree()
 
 " All extentions must be called before this point
 call plug#end()
