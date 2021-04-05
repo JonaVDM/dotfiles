@@ -21,6 +21,7 @@ RUN apk add \
     neovim \
     py3-psutil \
     py3-netifaces \
+	go \
     zsh-vcs
 
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

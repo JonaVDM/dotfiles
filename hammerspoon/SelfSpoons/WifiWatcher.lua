@@ -1,5 +1,5 @@
 wifiWatcher = nil
-local homeSSID = "Huize Whalesome"
+local homeSSID = "Huize Whalesome 5.0"
 local schoolSSID = "eduroam"
 local hotspotSSID = "🍕"
 local lastSSID = hs.wifi.currentNetwork()
