@@ -17,6 +17,7 @@ set nobackup
 set nowritebackup
 set cmdheight=2
 set updatetime=300
+set mouse=a
 
 set ts=4
 set sw=4
