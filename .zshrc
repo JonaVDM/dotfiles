@@ -30,5 +30,6 @@ fi
 
 # WSL config
 if [[ $(uname -a | grep microsoft) ]]; then
-  export PATH="$PATH:/usr/local/go/bin"
+  export PATH="$PATH:/usr/local/go/bin:/home/jona/.local/bin"
+  export GPG_TTY=$(tty)
 fi
