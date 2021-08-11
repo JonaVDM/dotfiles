@@ -14,6 +14,12 @@ eval $(thefuck --alias shit)
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
 # Macos Config
 if [[ $(uname) == "Darwin" ]]; then
   [[ -s "/Users/jona/.gvm/scripts/gvm" ]] && source "/Users/jona/.gvm/scripts/gvm"
@@ -30,5 +36,6 @@ fi
 
 # WSL config
 if [[ $(uname -a | grep microsoft) ]]; then
-  export PATH="$PATH:/usr/local/go/bin"
+  export PATH="$PATH:/usr/local/go/bin:/home/jona/.local/bin"
+  export GPG_TTY=$(tty)
 fi
