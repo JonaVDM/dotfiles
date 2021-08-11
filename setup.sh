@@ -13,3 +13,6 @@ sudo pip3 install thefuck
 
 # NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+
+# Base64 shell (Fancy colors)
+ln -s "$(pwd)/base16-shell" ~/.config/base16-shell
