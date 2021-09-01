@@ -1,0 +1,9 @@
+[user]
+	name = Jonathan
+	email = 32264711+JonaVDM@users.noreply.github.com
+[core]
+	editor = vim
+[init]
+	defaultBranch = main
+[merge]
+	ff = no
