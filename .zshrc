@@ -39,3 +39,15 @@ if [[ $(uname -a | grep microsoft) ]]; then
   export PATH="$PATH:/usr/local/go/bin:/home/jona/.local/bin"
   export GPG_TTY=$(tty)
 fi
+
+# Pop_OS setup
+if [[ $(uname -a | grep pop-os) ]]; then
+  export PATH="$PATH:/usr/local/go/bin:/home/jona/.local/bin:/home/jona/.config/composer/vendor/bin"
+  # alias py=python3
+
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
