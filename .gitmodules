@@ -4,3 +4,6 @@
 [submodule "tmux-plugins"]
 	path = tmux-plugins
 	url = git@github.com:tmux-plugins/tpm.git
+[submodule "nvim-config"]
+	path = nvim-config
+	url = git@github.com:JonaVDM/nvim-config.git
