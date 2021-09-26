@@ -8,7 +8,7 @@ font:
   # Normal (roman) font face
   normal:
     # Font family
-    family: Hack
+    family: 'Hack Nerd Font'
 
 # Shell
 #
