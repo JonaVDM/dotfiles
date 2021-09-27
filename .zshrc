@@ -32,6 +32,11 @@ if [[ $(uname) == "Darwin" ]]; then
 
   # Add in the latest version of ruby
   export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
 fi
 
 # WSL config
