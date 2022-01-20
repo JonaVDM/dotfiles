@@ -1,9 +1,6 @@
-[submodule "base16-shell"]
-	path = base16-shell
-	url = git@github.com:chriskempson/base16-shell.git
 [submodule "tmux-plugins"]
 	path = tmux-plugins
-	url = git@github.com:tmux-plugins/tpm.git
+	url = https://github.com/tmux-plugins/tpm
 [submodule "nvim-config"]
 	path = nvim-config
-	url = git@github.com:JonaVDM/nvim-config.git
+	url = https://github.com/JonaVDM/nvim-config
