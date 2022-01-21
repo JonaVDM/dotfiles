@@ -20,7 +20,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
-[[ -s "/Users/jona/.gvm/scripts/gvm" ]] && source "/Users/jona/.gvm/scripts/gvm"
+[[ -s "~/.gvm/scripts/gvm" ]] && source "~/.gvm/scripts/gvm"
 
 # Macos Config
 if [[ $(uname) == "Darwin" ]]; then
