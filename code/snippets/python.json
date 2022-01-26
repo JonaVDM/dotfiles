@@ -1,0 +1,13 @@
+{
+  "Define function": {
+    "prefix": "define-fun",
+    "body": [
+      "def ${1:fun}(${2:self}) -> $3:",
+      "    \"\"\"$4",
+      "    \"\"\"",
+      "    ${5:pass}",
+      "$0"
+    ],
+    "description": "Define a function with some extra stuff"
+  }
+}
