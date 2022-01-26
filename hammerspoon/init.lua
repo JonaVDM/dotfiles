@@ -1,6 +1,6 @@
 -- Hendrik Peters Hammerspoon config
 -- Edited by Jonathan
--- Removed the vim things & react native
+-- Removed the vim & react native thingsk
 -- ---------------------------------
 
 -- These dotfiles are the configuration of Hammerspoon for OSX.
@@ -59,6 +59,9 @@ end)
 hs.hotkey.bind(placid, 'B', function()
   hs.application.open('Firefox')
 end)
+
+-- Screenshot hotkeys, since apples keybinding don't make sense
+require('SelfSpoons/Screenshot')
 
 -- Awesome WIFI tools
 require('SelfSpoons/WifiWatcher')
