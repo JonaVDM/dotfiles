@@ -4,7 +4,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="spaceship"
 SPACESHIP_TIME_SHOW=true
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose gh)
 
 source $ZSH/oh-my-zsh.sh
 
