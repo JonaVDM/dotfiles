@@ -25,6 +25,8 @@ if which pyenv-virtualenv-init > /dev/null; then
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 fi
 
+alias muxi="tmuxinator"
+
 [[ -s ~/.gvm/scripts/gvm ]] && source ~/.gvm/scripts/gvm
 
 # Macos Config
