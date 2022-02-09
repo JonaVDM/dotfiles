@@ -1,10 +1,13 @@
 export ZSH=$HOME/.oh-my-zsh
 
+# Somehow this is not set on MacOS by default...
+export EDITOR=nvim
+
 # https://github.com/spaceship-prompt/spaceship-prompt
 ZSH_THEME="spaceship"
 SPACESHIP_TIME_SHOW=true
 
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose gh)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose gh rails ruby)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,3 +43,6 @@ if [[ $(uname) == "Darwin" ]]; then
   # Add in the latest version of ruby
   export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
