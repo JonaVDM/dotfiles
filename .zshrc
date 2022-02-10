@@ -32,13 +32,13 @@ alias muxi="tmuxinator"
 
 [[ -s ~/.gvm/scripts/gvm ]] && source ~/.gvm/scripts/gvm
 
+# Add in kubernetes kubectl support
+source <(kubectl completion zsh)
+
 # Macos Config
 if [[ $(uname) == "Darwin" ]]; then
   export PATH="$PATH":"$HOME/.pub-cache/bin"
   export PATH=$PATH:"$HOME/development/Dictu"
-
-  # Add in kubernetes kubectl support
-  source <(kubectl completion zsh)
 
   # Add in the latest version of ruby
   export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
