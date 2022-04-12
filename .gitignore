@@ -1,3 +1,4 @@
 .DS_Store
 plugged
 secrets.vim
+waybar/style.css
