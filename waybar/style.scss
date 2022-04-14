@@ -1,61 +1,61 @@
 /* Import theme variables */
-@import "themes/catppuccin";
+@import "themes/nord";
 
-*{
-   font-family: "Hack Nerd Font";
-   font-size: 14px;
+* {
+  font-family: "Hack Nerd Font";
+  font-size: 14px;
 }
 
 window#waybar {
-    background-color: $background;
+  background-color: $background;
 }
 
-#workspaces button{
-    color: $textcolor;
+#workspaces button {
+  color: $textcolor;
 }
 
-#workspaces button:hover{
-    box-shadow: inherit;
-    text-shadow: inherit;
-    color: $pink;
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: $highlightmodule;
 }
 
-#workspaces button.focused{
-    color: $blue;
+#workspaces button.focused {
+  color: $blue;
 }
 
 .modules-left,
 .modules-center,
 .modules-right {
-    box-shadow: 0px 3px 6px rgba(0,0,0,0.16), 0px 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .modules-left {
-    background: $modulecolor;
-    margin: 7px 4px;
-    padding: 0px 10px;
-    border-radius: 40px;
+  background: $modulecolor;
+  margin: 7px 4px;
+  padding: 0px 10px;
+  border-radius: 40px;
 }
 
 .modules-center {
-    margin: 7px 0px 7px 0px;
-    padding: 7px;
-    border-radius: 90px;
-    background: $modulecolor;
-    color: white;
+  margin: 7px 0px 7px 0px;
+  padding: 7px;
+  border-radius: 90px;
+  background: $modulecolor;
+  color: white;
 }
 
 .modules-right {
-    margin: 7px 7px 7px 7px;
-    background-color: $modulecolor;
-    border-radius: 40px;
+  margin: 7px 7px 7px 7px;
+  background-color: $modulecolor;
+  border-radius: 40px;
 }
-.modules-right *{
-    margin: 7px 2px;
+.modules-right * {
+  margin: 7px 2px;
 }
 
 #mode {
-    background-color: $highlightmodule;
+  background-color: $highlightmodule;
 }
 
 #pulseaudio,
@@ -66,56 +66,55 @@ window#waybar {
 #clock,
 #tray,
 #cpu,
-#custom-power{
-    padding: 0px 10px;
+#custom-power {
+  padding: 0px 10px;
 }
 
 #custom-power {
-    color: $red;
-    font-size: 16px;
+  color: $red;
+  font-size: 16px;
 }
 
-#network.wifi{
-    color: $green;
+#network.wifi {
+  color: $green;
 }
 
-
-#network.ethernet{
-    color: $green;
+#network.ethernet {
+  color: $green;
 }
 
 #cpu {
-    color: $yellow;
+  color: $yellow;
 }
 
 #memory {
-    color: $blue;
+  color: $blue;
 }
 
 #backlight {
-    color: $yellow;
+  color: $yellow;
 }
 
-#battery.good{
-    color: $green;
+#battery.good {
+  color: $green;
 }
 
-#battery.warning{
-    color: $yellow;
+#battery.warning {
+  color: $yellow;
 }
 
-#battery.critical{
-    color: $red;
+#battery.critical {
+  color: $red;
 }
 
 #clock {
-    color: $textcolor;
+  color: $textcolor;
 }
 
 #tray > * {
-    margin: 2px;
+  margin: 2px;
 }
 
 #pulseaudio {
-    color: $blue;
+  color: $blue;
 }
