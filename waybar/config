@@ -65,10 +65,10 @@
         "max-length": 40,
         "format-icons": {
             "spotify": "",
+            "ncspot": "",
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/custom_modules/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "/bin/python3 $HOME/.config/waybar/custom_modules/mediaplayer.py 2> /dev/null"
     }
 }
