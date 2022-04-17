@@ -59,7 +59,7 @@ input "type:keyboard" {
 }
 
 input "type:pointer" {
-  pointer_accel -0.6 
+  pointer_accel -0.6
 }
 
 # Example configuration:
@@ -227,6 +227,11 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+#
+# Notification daemon
+#
+exec mako
 
 #
 # Status Bar:
