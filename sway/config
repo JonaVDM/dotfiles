@@ -209,6 +209,12 @@ input "type:pointer" {
     bindsym XF86AudioPlay exec playerctl -a play-pause
 
 #
+# Screenshots
+#
+bindsym $mod+Print exec grim - | wl-copy
+bindsym $mod+Shift+Print exec grim -g "$(slurp)" - | wl-copy
+
+#
 # Resizing containers:
 #
 mode "resize" {
