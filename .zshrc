@@ -45,3 +45,9 @@ fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Linux config
+if [[ $(uname) == "Linux"]]; then
+  # Run docker rootless
+  export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+fi
