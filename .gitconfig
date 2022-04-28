@@ -5,7 +5,3 @@
 	editor = vim
 [init]
 	defaultBranch = main
-[merge]
-	ff = no
-[pull]
-	rebase = true
