@@ -5,6 +5,7 @@ export EDITOR=nvim
 
 # https://github.com/spaceship-prompt/spaceship-prompt
 ZSH_THEME="spaceship"
+export SPACESHIP_DOCKER_SHOW=false
 
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker docker-compose gh rails ruby)
 
