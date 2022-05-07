@@ -41,11 +41,14 @@ window#waybar {
 
 #pulseaudio,
 #clock,
-#tray {
+#tray,
+#custom-powermenu {
   padding: 0px 10px;
 }
 
-#clock {
+#clock,
+#pulsuaudio,
+#custom-powermenu {
   color: $textcolor;
 }
 
@@ -55,4 +58,9 @@ window#waybar {
 
 #pulseaudio {
   color: $textcolor;
+}
+
+#custom-powermenu {
+  color: $red;
+  font-size: 1.7rem;
 }

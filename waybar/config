@@ -8,7 +8,8 @@
   "modules-right": [
     "pulseaudio",
     "clock",
-    "tray"
+    "tray",
+    "custom/powermenu"
   ],
   "keyboard-state": {
     "numlock": true,
@@ -50,5 +51,9 @@
       ]
     },
     "on-click": "pavucontrol"
+  },
+  "custom/powermenu": {
+    "format": "襤",
+    "on-click": "rofi -show power-menu -modi \"power-menu:rofi-power-menu --choices=shutdown/reboot/logout\""
   }
 }
