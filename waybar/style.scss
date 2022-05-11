@@ -1,66 +1,63 @@
-/* Import theme variables */
-@import "themes/nord";
+$text: #eceff4;
+$background: #2e3440;
+$red: #bf616a;
+$blue: #5e81ac;
+$green: #8fbcbb;
+$yellow: #ebcb8b;
+$highlightmodule: #4c566a;
+$textcolor: #eceff4;
 
 * {
   font-family: "Hack Nerd Font";
   font-size: 14px;
 }
 
-window#waybar {
+window#waybar.workspaces {
+  background-color: transparent;
+
+  .modules-center {
+    background-color: $background;
+    margin: 2px;
+    border-radius: 20px;
+
+    padding: 15px 0;
+  }
+
+  button.focused {
+    color: $blue;
+  }
+
+  button {
+    color: $text;
+  }
+}
+
+window#waybar.menubar {
   background-color: $background;
-}
+  color: $text;
 
-#workspaces button {
-  color: $textcolor;
-}
+  .modules-right {
+    margin: 4px 4px;
 
-#workspaces button:hover {
-  box-shadow: inherit;
-  text-shadow: inherit;
-  color: $highlightmodule;
-}
+    * {
+      padding: 0 5px;
+      margin-left: 5px;
+    }
+  }
 
-#workspaces button.focused {
-  color: $blue;
-}
+  .modules-left {
+    margin: 4px 9px;
+  }
 
-.modules-left {
-  margin: 5px 0px;
-}
-
-.modules-right {
-  margin: 5px;
-}
-.modules-right * {
-  margin: 5px 0;
-}
-
-#mode {
-  background-color: $highlightmodule;
-}
-
-#pulseaudio,
-#clock,
-#tray,
-#custom-powermenu {
-  padding: 0px 10px;
-}
-
-#clock,
-#pulsuaudio,
-#custom-powermenu {
-  color: $textcolor;
-}
-
-#tray > * {
-  margin: 2px;
-}
-
-#pulseaudio {
-  color: $textcolor;
+  #mode {
+    margin-right: 5px;
+    padding: 0 6px;
+    background-color: $yellow;
+    color: black;
+  }
 }
 
 #custom-powermenu {
   color: $red;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 }

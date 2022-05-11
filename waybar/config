@@ -1,59 +1,58 @@
-{
-  "layer": "top",
-  "position": "left",
-  "modules-left": [
-    "sway/workspaces",
-    "sway/mode"
-  ],
-  "modules-right": [
-    "pulseaudio",
-    "clock",
-    "tray",
-    "custom/powermenu"
-  ],
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
-    }
+[
+  {
+    "name": "workspaces",
+    "layer": "top",
+    "position": "left",
+    "modules-center": [
+      "sway/workspaces"
+    ]
   },
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
-  "tray": {
-    "spacing": 10
-  },
-  "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
-  },
-  "pulseaudio": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon}",
-    "format-bluetooth-muted": "ﱝ {icon}",
-    "format-muted": "<span color=\"#eb6f92\">ﱝ</span>",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
+  {
+    "name": "menubar",
+    "layer": "top",
+    "position": "top",
+    "modules-left": [
+      "sway/mode",
+      "sway/window"
+    ],
+    "modules-right": [
+      "tray",
+      "pulseaudio",
+      "clock",
+      "custom/powermenu"
+    ],
+    "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%Y-%m-%d}"
     },
-    "on-click": "pavucontrol"
-  },
-  "custom/powermenu": {
-    "format": "襤",
-    "on-click": "rofi -show power-menu -modi \"power-menu:rofi-power-menu --choices=shutdown/reboot/logout\""
+    "custom/powermenu": {
+      "format": "襤",
+      "on-click": "rofi -show power-menu -modi \"power-menu:rofi-power-menu --choices=shutdown/reboot/logout\""
+    },
+    "pulseaudio": {
+      "format": "{volume}% {icon}",
+      "format-bluetooth": "{volume}% {icon}",
+      "format-bluetooth-muted": "ﱝ {icon}",
+      "format-muted": "<span color=\"#eb6f92\">ﱝ</span>",
+      "format-source": "{volume}% ",
+      "format-source-muted": "",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [
+          "",
+          "",
+          ""
+        ]
+      },
+      "on-click": "pavucontrol"
+    },
+    "tray": {
+      "spacing": 10
+    }
   }
-}
+]
