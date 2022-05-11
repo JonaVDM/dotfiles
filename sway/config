@@ -23,6 +23,18 @@ output * bg ~/Pictures/wallpaper.png fill
 gaps inner 7
 gaps outer 5
 
+# Remove text from title bar
+font pango:monospace 0
+titlebar_border_thickness 0
+titlebar_padding 5
+
+# Set the titlebar colors
+client.focused #a3be8c #a3be8c #ffffff #2e9ef4 #285577
+client.focused_inactive #434c5e #434c5e #ffffff #484e50 #5f676a
+client.focused_tab_title #434c5e #434c5e #ffffff
+client.unfocused #434c5e #434c5ehh #888888 #292d2e #222222
+client.urgent #bf616a #bf616a #ffffff #900000 #900000
+
 ### Idle configuration
 exec swayidle -w \
     timeout 3000 'swaylock -f -c 000000' \
