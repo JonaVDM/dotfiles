@@ -32,7 +32,7 @@ titlebar_padding 5
 client.focused #a3be8c #a3be8c #ffffff #2e9ef4 #285577
 client.focused_inactive #434c5e #434c5e #ffffff #484e50 #5f676a
 client.focused_tab_title #434c5e #434c5e #ffffff
-client.unfocused #434c5e #434c5ehh #888888 #292d2e #222222
+client.unfocused #434c5e #434c5e #888888 #292d2e #222222
 client.urgent #bf616a #bf616a #ffffff #900000 #900000
 
 ### Idle configuration
@@ -124,12 +124,12 @@ input "type:pointer" {
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    # bindsym $mod+b splith
+    # bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
-    bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    # bindsym $mod+s layout stacking
+    # bindsym $mod+w layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
