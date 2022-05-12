@@ -5,7 +5,24 @@
     "position": "left",
     "modules-center": [
       "sway/workspaces"
-    ]
+    ],
+    "sway/workspaces": {
+      "persistent_workspaces": {
+        "1": [],
+        "2": [],
+        "3": [],
+        "9": [],
+        "10": []
+      },
+      "format": "{icon}",
+      "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "",
+        "9": "ﭮ",
+        "10": "ﱘ"
+      }
+    }
   },
   {
     "name": "menubar",
@@ -30,19 +47,14 @@
       "on-click": "rofi -show power-menu -modi \"power-menu:rofi-power-menu --choices=shutdown/reboot/logout\""
     },
     "pulseaudio": {
-      "format": "{volume}% {icon}",
-      "format-bluetooth": "{volume}% {icon}",
-      "format-bluetooth-muted": "ﱝ {icon}",
+      "format": "{icon} {volume}%",
+      "format-bluetooth": "{icon} {volume}% ",
+      "format-bluetooth-muted": "{icon} {volume}",
       "format-muted": "<span color=\"#eb6f92\">ﱝ</span>",
-      "format-source": "{volume}% ",
-      "format-source-muted": "",
+      "format-source": " {volume}%",
+      "format-source-muted": "<span color=\"#eb6f92\"></span>",
       "format-icons": {
         "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
         "default": [
           "",
           "",

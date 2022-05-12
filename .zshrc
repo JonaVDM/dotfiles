@@ -52,10 +52,3 @@ if [[ $(uname) == "Linux" ]]; then
   # Run docker rootless
   export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 fi
-
-# if tmux is executable and not inside a tmux session, then try to attach.
-# if attachment fails, start a new session
-[ -x "$(command -v tmux)" ] \
-  && [ -z "${TMUX}" ] \
-  && { tmux; } >/dev/null 2>&1
-
