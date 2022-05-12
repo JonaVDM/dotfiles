@@ -34,7 +34,8 @@
     ],
     "modules-right": [
       "tray",
-      "pulseaudio",
+      "pulseaudio#out",
+      "pulseaudio#in",
       "clock",
       "custom/powermenu"
     ],
@@ -46,13 +47,11 @@
       "format": "襤",
       "on-click": "rofi -show power-menu -modi \"power-menu:rofi-power-menu --choices=shutdown/reboot/logout\""
     },
-    "pulseaudio": {
+    "pulseaudio#out": {
       "format": "{icon} {volume}%",
       "format-bluetooth": "{icon} {volume}% ",
       "format-bluetooth-muted": "{icon} {volume}",
       "format-muted": "<span color=\"#eb6f92\">ﱝ</span>",
-      "format-source": " {volume}%",
-      "format-source-muted": "<span color=\"#eb6f92\"></span>",
       "format-icons": {
         "headphone": "",
         "default": [
@@ -62,6 +61,12 @@
         ]
       },
       "on-click": "pavucontrol"
+    },
+    "pulseaudio#in": {
+      "format": "{format_source}",
+      "format-source": "",
+      "format-source-muted": "<span color=\"#eb6f92\"></span>",
+      "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     },
     "tray": {
       "spacing": 10
