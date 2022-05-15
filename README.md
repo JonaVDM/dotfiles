@@ -49,6 +49,8 @@ The [h, j, k, l] come from vim and translate to [left, up, down, right].
 | Keybinding                 | Function                                                 |
 | -------------------------- | -------------------------------------------------------- |
 | Mod + Enter                | Open terminal                                            |
+| Mod + Control + Enter      | Open terminal without tmux                               |
+| Mod + Shift + Enter        | Open terminal in floating mode                           |
 | Mod + Shift + q            | Kill window                                              |
 | Mod + Space                | Open app launcher                                        |
 | Mod + Shift + c            | Reload configuration                                     |
@@ -65,13 +67,13 @@ The [h, j, k, l] come from vim and translate to [left, up, down, right].
 | Mod + Shift + Minus        | Move window to scratchpad                                |
 | Mod + Minus                | Show application in scratchpad                           |
 | Mod + Control + l          | Lock the screen                                          |
-| Keyboard mute              | Mute the volume                                          |
-| Keyboard volume up         | Volume up                                                |
-| Keyboard volume down       | Volume down                                              |
-| Keyboard stop              | Stop currently playing                                   |
-| Keyboard previous          | Play previous                                            |
-| Keyboard next              | Play next                                                |
-| Keyboard play/pause        | Toggle play/pause                                        |
+| Function mute              | Mute the volume                                          |
+| Function volume up         | Volume up                                                |
+| Function volume down       | Volume down                                              |
+| Function stop              | Stop currently playing                                   |
+| Function previous          | Play previous                                            |
+| Function next              | Play next                                                |
+| Function play/pause        | Toggle play/pause                                        |
 | Mod + Print                | Make a screenshot                                        |
 | Mod + Shift + Print        | Make a screenshot of selection                           |
 | Mod + r                    | Go into resize mode                                      |

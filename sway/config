@@ -60,6 +60,12 @@ input "type:pointer" {
     # Start a terminal
     bindsym $mod+Return exec $term -e tmux
 
+    # Start a terminal without tmux
+    bindsym $mod+Ctrl+Return exec $term
+
+    # Start a terminal floating
+    bindsym $mod+Shift+Return exec ~/.config/sway/scripts/floating.bash $term
+
     # Kill focused window
     bindsym $mod+Shift+q kill
 
