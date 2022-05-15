@@ -41,6 +41,41 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
 
+## Sway
+
+A quick overview from all the keybindings used in the swayconfig.
+The [h, j, k, l] come from vim and translate to [left, up, down, right].
+
+| Keybinding                 | Function                                                 |
+| -------------------------- | -------------------------------------------------------- |
+| Mod + Enter                | Open terminal                                            |
+| Mod + Shift + q            | Kill window                                              |
+| Mod + Space                | Open app launcher                                        |
+| Mod + Shift + c            | Reload configuration                                     |
+| Mod + Shift + e            | Exit Sway                                                |
+| Mod + [h, j, k, l]         | Focus to window in direction                             |
+| Mod + Shift + [h, j, k, l] | Move window to direction                                 |
+| Mod + 1..0                 | Switch to workspace 1..0                                 |
+| Mod + Shift + 1..0         | Move window to workspace 1..0                            |
+| Mod + e                    | Toggle between vertical and horizontal layout            |
+| Mod + f                    | Toggle fullscreen on current window                      |
+| Mod + Shift + Space        | Toggle floating window mode for current screen           |
+| Mod + d                    | Toggle focus between floating windows and tiling windows |
+| Mod + a                    | Toggle focus to the parent window                        |
+| Mod + Shift + Minus        | Move window to scratchpad                                |
+| Mod + Minus                | Show application in scratchpad                           |
+| Mod + Control + l          | Lock the screen                                          |
+| Keyboard mute              | Mute the volume                                          |
+| Keyboard volume up         | Volume up                                                |
+| Keyboard volume down       | Volume down                                              |
+| Keyboard stop              | Stop currently playing                                   |
+| Keyboard previous          | Play previous                                            |
+| Keyboard next              | Play next                                                |
+| Keyboard play/pause        | Toggle play/pause                                        |
+| Mod + Print                | Make a screenshot                                        |
+| Mod + Shift + Print        | Make a screenshot of selection                           |
+| Mod + r                    | Go into resize mode                                      |
+
 ## Style for waybar
 
 After placing waybar in the right folder you need to make sure to compile the scss down to css.
