@@ -11,11 +11,14 @@ set $down j
 set $up k
 set $right l
 
-# Your preferred terminal emulator
+# preferred applications
 set $term alacritty
-
-# Your preferred application launcher
 set $menu rofi -show drun
+set $browser firefox
+set $files thunar
+
+# Script to go into floating mode
+set $floating ~/.config/sway/scripts/floating.bash
 
 output * bg ~/Pictures/wallpaper.png fill
 
@@ -57,14 +60,12 @@ input "type:pointer" {
 #
 # Basics:
 #
-    # Start a terminal
     bindsym $mod+Return exec $term -e tmux
-
-    # Start a terminal without tmux
     bindsym $mod+Ctrl+Return exec $term
-
-    # Start a terminal floating
-    bindsym $mod+Shift+Return exec ~/.config/sway/scripts/floating.bash $term
+    bindsym $mod+Shift+Return exec $floating $term
+    bindsym $mod+b exec $browser
+    bindsym $mod+e exec $files
+    bindsym $mod+Shift+e exec $floating $files
 
     # Kill focused window
     bindsym $mod+Shift+q kill
@@ -82,8 +83,6 @@ input "type:pointer" {
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 #
 # Moving around:
 #
@@ -112,6 +111,7 @@ input "type:pointer" {
     bindsym $mod+8 workspace number 8
     bindsym $mod+9 workspace number 9
     bindsym $mod+0 workspace number 10
+
     # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace number 1
     bindsym $mod+Shift+2 move container to workspace number 2
@@ -127,17 +127,6 @@ input "type:pointer" {
 #
 # Layout stuff:
 #
-    # You can "split" the current object of your focus with
-    # $mod+b or $mod+v, for horizontal and vertical splits
-    # respectively.
-    # bindsym $mod+b splith
-    # bindsym $mod+v splitv
-
-    # Switch the current container between different layout styles
-    # bindsym $mod+s layout stacking
-    # bindsym $mod+w layout tabbed
-    bindsym $mod+e layout toggle split
-
     # Make the current focus fullscreen
     bindsym $mod+f fullscreen
 
@@ -162,59 +151,39 @@ input "type:pointer" {
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
 
-#
 # Lock the screen
-#
-    bindsym $mod+Ctrl+l exec swaylock
+bindsym $mod+Ctrl+l exec swaylock
 
-#
 # Music control
-#
-    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 
-    bindsym XF86AudioStop exec playerctl -a stop
-    bindsym XF86AudioPrev exec playerctl -a previous
-    bindsym XF86AudioNext exec playerctl -a next
-    bindsym XF86AudioPlay exec playerctl -a play-pause
+bindsym XF86AudioStop exec playerctl -a stop
+bindsym XF86AudioPrev exec playerctl -a previous
+bindsym XF86AudioNext exec playerctl -a next
+bindsym XF86AudioPlay exec playerctl -a play-pause
 
-#
 # Screenshots
-#
 bindsym $mod+Print exec grim - | wl-copy
 bindsym $mod+Shift+Print exec grim -g "$(slurp)" - | wl-copy
 
-#
 # Resizing containers:
-#
 mode "resize" {
-    # left will shrink the containers width
     bindsym $left resize shrink width 10px
-
-    # right will grow the containers width
     bindsym $right resize grow width 10px
-
-    # up will shrink the containers height
     bindsym $up resize shrink height 10px
-
-    # down will grow the containers height
     bindsym $down resize grow height 10px
 
-    # Return to default mode
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
 
-#
 # Notification daemon
-#
 exec mako
 
-#
 # Status Bar:
-#
 bar {
     swaybar_command waybar
 }

@@ -51,15 +51,16 @@ The [h, j, k, l] come from vim and translate to [left, up, down, right].
 | Mod + Enter                | Open terminal                                            |
 | Mod + Control + Enter      | Open terminal without tmux                               |
 | Mod + Shift + Enter        | Open terminal in floating mode                           |
+| Mod + e                    | Open file explorer (Thunar)                              |
+| Mod + Shift + e            | Open file explorer (Thunar) in floating mode             |
+| Mod + b                    | Open browser (Firefox)                                   |
 | Mod + Shift + q            | Kill window                                              |
 | Mod + Space                | Open app launcher                                        |
 | Mod + Shift + c            | Reload configuration                                     |
-| Mod + Shift + e            | Exit Sway                                                |
 | Mod + [h, j, k, l]         | Focus to window in direction                             |
 | Mod + Shift + [h, j, k, l] | Move window to direction                                 |
 | Mod + 1..0                 | Switch to workspace 1..0                                 |
 | Mod + Shift + 1..0         | Move window to workspace 1..0                            |
-| Mod + e                    | Toggle between vertical and horizontal layout            |
 | Mod + f                    | Toggle fullscreen on current window                      |
 | Mod + Shift + Space        | Toggle floating window mode for current screen           |
 | Mod + d                    | Toggle focus between floating windows and tiling windows |
