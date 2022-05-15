@@ -8,7 +8,7 @@ pid=$!
 
 swaymsg -t subscribe -m '[ "window" ]' \
   | jq --unbuffered --argjson pid "$pid" '.container | select(.pid == $pid) | .id' \
-  | xargs -I '@' -- swaymsg '[ con_id=@ ] floating enable' &
+  | xargs -I '@' -- swaymsg '[ con_id=@ ] floating enable, resize set 1200 800' &
 
 subscription=$!
 
