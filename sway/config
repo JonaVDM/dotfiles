@@ -213,4 +213,6 @@ bar {
     swaybar_command waybar
 }
 
+exec_always /usr/bin/python ~/.config/sway/scripts/tiling.py
+
 include /etc/sway/config.d/*

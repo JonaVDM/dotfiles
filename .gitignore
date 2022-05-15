@@ -2,3 +2,4 @@
 plugged
 secrets.vim
 waybar/style.css
+sway/scripts/tiling.py
