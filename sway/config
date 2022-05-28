@@ -12,7 +12,7 @@ set $up k
 set $right l
 
 # preferred applications
-set $term alacritty
+set $term kitty
 set $menu rofi -show drun
 set $browser firefox
 set $files thunar
@@ -23,8 +23,8 @@ set $floating ~/.config/sway/scripts/floating.bash
 output * bg ~/Pictures/wallpaper.png fill
 
 # Gaps
-gaps inner 7
-gaps outer 5
+gaps inner 5
+gaps outer 0
 
 # Remove text from title bar
 font pango:monospace 0
@@ -187,6 +187,8 @@ exec mako
 bar {
     swaybar_command waybar
 }
+
+exec_always gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 exec_always /usr/bin/python ~/.config/sway/scripts/tiling.py
 
