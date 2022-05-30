@@ -52,3 +52,5 @@ if [[ $(uname) == "Linux" ]]; then
   # Run docker rootless
   export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 fi
+
+bindkey -s ^f "bash ~/.dotfiles/scripts/tmux-switcher.sh\n"

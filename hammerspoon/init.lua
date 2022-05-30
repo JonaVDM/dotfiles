@@ -7,18 +7,18 @@
 -- More info and download links to the software can be found on their site
 -- https://www.hammerspoon.org/
 
-hyper = {'ctrl', 'alt', 'cmd'}
-placid = {'ctrl', 'cmd'}
+hyper = { 'ctrl', 'alt', 'cmd' }
+placid = { 'ctrl', 'cmd' }
 
 -- Window manager
 hs.loadSpoon('MiroWindowsManager')
 hs.window.animationDuration = 0.3
 spoon.MiroWindowsManager:bindHotkeys({
-  up = {placid, 'K'},
-  right = {placid, 'L'},
-  down = {placid, 'J'},
-  left = {placid, 'H'},
-  fullscreen = {placid, 'g'}
+  up = { placid, 'K' },
+  right = { placid, 'L' },
+  down = { placid, 'J' },
+  left = { placid, 'H' },
+  fullscreen = { placid, 'g' }
 })
 
 -- Some Ad-ons for the window manager
@@ -30,19 +30,19 @@ spoon.ClipboardTool.hist_size = 100
 spoon.ClipboardTool.show_in_menubar = false
 spoon.ClipboardTool:start()
 spoon.ClipboardTool:bindHotkeys({
-  toggle_clipboard = {placid, 'V'}
+  toggle_clipboard = { placid, 'V' }
 })
 
 -- Caffeine
 hs.loadSpoon('Caffeine')
 spoon.Caffeine:bindHotkeys({
-  toggle = {placid, '6'}
+  toggle = { placid, '6' }
 })
 spoon.Caffeine:start()
 
 -- Open the terminal (like ctrl + alt + t on linux)
 hs.hotkey.bind(placid, 'T', function()
-  hs.application.open('alacritty')
+  hs.application.open('kitty')
 end)
 
 -- Open spotify
