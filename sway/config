@@ -189,7 +189,8 @@ bar {
 }
 
 exec_always gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-
 exec_always /usr/bin/python ~/.config/sway/scripts/tiling.py
+# exec wl-clipboard-history -t
+# bindsym $mod+v wl-clipboard-history -l 20 | sed 's/^[^,]*,//g' | rofi -dmenu | wl-copy -n
 
 include /etc/sway/config.d/*
