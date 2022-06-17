@@ -36,7 +36,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM}
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 ```
 
-## Sway
+## Other configs
+[NeoVIM Config](https://github.com/JonaVDM/neovim-config).
 
-On my Arch machine I use sway as desktop environment. The config for this is
-found in [this repo](https://github.com/JonaVDM/sway-config).
+[Sway Config](https://github.com/JonaVDM/sway-config).
+
+
