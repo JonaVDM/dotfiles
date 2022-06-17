@@ -70,17 +70,21 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
 SAVEHIST=$HISTSIZE
 
-# Some custom alias
+# Alias setup
 alias gaa='git add .'
 alias gcm='git commit -m'
 alias gp='git push'
 alias gl='git pull'
+alias gf='git fetch -a'
 alias glog='git log --oneline --decorate --graph'
 alias glg='git log --stat'
+alias ls='ls --color=auto'
 alias lsa='ls -lah'
 alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
+alias dcd='docker compose down'
+alias dcu='docker compose up --build'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
