@@ -38,8 +38,6 @@ if which pyenv-virtualenv-init > /dev/null; then
   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 fi
 
-alias muxi="tmuxinator"
-
 [[ -s ~/.gvm/scripts/gvm ]] && source ~/.gvm/scripts/gvm
 
 # Add in kubernetes kubectl support
@@ -78,6 +76,8 @@ alias gl='git pull'
 alias gf='git fetch -a'
 alias glog='git log --oneline --decorate --graph'
 alias glg='git log --stat'
+alias gst='git status'
+alias gch='git checkout'
 alias ls='ls --color=auto'
 alias lsa='ls -lah'
 alias l='ls -lah'
@@ -85,6 +85,7 @@ alias ll='ls -lh'
 alias la='ls -lAh'
 alias dcd='docker compose down'
 alias dcu='docker compose up --build'
+alias v='nvim'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
