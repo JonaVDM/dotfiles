@@ -40,9 +40,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # [[ -s ~/.gvm/scripts/gvm ]] && source ~/.gvm/scripts/gvm
 
-# Add in kubernetes kubectl support
-source <(completion zsh)
-
 # Macos Config
 if [[ $(uname) == "Darwin" ]]; then
   export PATH="$PATH":"$HOME/.pub-cache/bin"
