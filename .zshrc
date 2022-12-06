@@ -17,7 +17,7 @@ zinit light romkatv/powerlevel10k
 zinit light zsh-users/zsh-syntax-highlighting
 
 zinit light zsh-users/zsh-completions
-zinit light felixr/docker-zsh-completion 
+zinit light felixr/docker-zsh-completion
 autoload -Uz compinit
 compinit
 
@@ -28,28 +28,30 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init --path)"
+# eval "$(pyenv init -)"
 
-if which pyenv-virtualenv-init > /dev/null; then
-  eval "$(pyenv virtualenv-init -)"
-  export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-fi
+# if which pyenv-virtualenv-init > /dev/null; then
+#   eval "$(pyenv virtualenv-init -)"
+#   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+# fi
 
-[[ -s ~/.gvm/scripts/gvm ]] && source ~/.gvm/scripts/gvm
+# [[ -s ~/.gvm/scripts/gvm ]] && source ~/.gvm/scripts/gvm
 
 # Add in kubernetes kubectl support
-source <(kubectl completion zsh)
+source <(completion zsh)
 
 # Macos Config
 if [[ $(uname) == "Darwin" ]]; then
   export PATH="$PATH":"$HOME/.pub-cache/bin"
-  export PATH=$PATH:"$HOME/development/Dictu"
 
   # Add in the latest version of ruby
   export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/3.0.0/bin:$PATH"
+
+  # To make sure it is using the right version of java
+  export PATH="/usr/local/opt/openjdk/bin:$PATH"
 fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
@@ -87,5 +89,7 @@ alias dcd='docker compose down'
 alias dcu='docker compose up --build'
 alias v='nvim'
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+alias git-count='git ls-files | while read f; do git blame --line-porcelain $f | grep "^author "; done | sort -f | uniq -ic | sort'
+alias git-clean='g4it fetch -p ; git branch -r | awk "{print $1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print $1}" | xargs git branch -d'
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

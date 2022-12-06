@@ -13,7 +13,7 @@ If you want to do this manually, than these are the symbolic links that you need
 ln -s "$(pwd)/.tmux.conf" ~/.tmux.conf
 ln -s "$(pwd)/.gitconfig" ~/.gitconfig
 ln -s "$(pwd)/.zshrc" ~/.zshrc
-ln -s "$(pwd)/alacritty" ~/.config/alacritty
+ln -s "$(pwd)/kitty" ~/.config/kitty
 
 # MacOS
 ln -s "$(pwd)/hammerspoon" ~/.hammerspoon
@@ -37,8 +37,7 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 ```
 
 ## Other configs
+
 [NeoVIM Config](https://github.com/JonaVDM/neovim-config).
 
 [Sway Config](https://github.com/JonaVDM/sway-config).
-
-
