@@ -62,6 +62,10 @@ fi
 
 bindkey -s ^f "bash ~/.dotfiles/scripts/tmux-switcher.sh\n"
 
+if command -v go &> /dev/null; then
+  export PATH="$(go env GOPATH)/bin:$PATH"
+fi
+
 # Set up history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=100000
