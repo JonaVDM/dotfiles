@@ -51,9 +51,6 @@ if [[ $(uname) == "Darwin" ]]; then
   export PATH="/usr/local/opt/openjdk/bin:$PATH"
 fi
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 # Linux config
 if [[ $(uname) == "Linux" ]]; then
   # Run docker rootless
@@ -89,6 +86,8 @@ alias la='ls -lAh'
 alias dcd='docker compose down'
 alias dcu='docker compose up --build'
 alias v='nvim'
+alias pm="pnpm"
+alias cl="clear"
 
 alias git-count='git ls-files | while read f; do git blame --line-porcelain $f | grep "^author "; done | sort -f | uniq -ic | sort'
 alias git-clean='g4it fetch -p ; git branch -r | awk "{print $1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print $1}" | xargs git branch -d'
