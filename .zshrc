@@ -57,6 +57,9 @@ fi
 if [[ $(uname) == "Linux" ]]; then
   # Run docker rootless
   export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
+
+  export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+  export PATH="$PATH:$GEM_HOME/bin"
 fi
 
 bindkey -s ^f "bash ~/.dotfiles/scripts/tmux-switcher.sh\n"
