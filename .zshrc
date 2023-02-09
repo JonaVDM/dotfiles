@@ -42,6 +42,8 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # Macos Config
 if [[ $(uname) == "Darwin" ]]; then
+  export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
+  
   export PATH="$PATH":"$HOME/.pub-cache/bin"
 
   # Add in the latest version of ruby
