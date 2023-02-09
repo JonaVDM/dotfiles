@@ -94,6 +94,9 @@ alias v='nvim'
 alias pm="pnpm"
 alias cl="clear"
 
+# never actually use it, unless you're done with your teammates
+alias yolo='git add --all && git commit -m "$(curl --fail --silent https://whatthecommit.com/index.txt)"'
+
 alias git-count='git ls-files | while read f; do git blame --line-porcelain $f | grep "^author "; done | sort -f | uniq -ic | sort'
 alias git-clean='g4it fetch -p ; git branch -r | awk "{print $1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print $1}" | xargs git branch -d'
 
