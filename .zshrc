@@ -28,18 +28,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# export PYENV_ROOT="$HOME/.pyenv"
-# export PATH="$PYENV_ROOT/bin:$PATH"
-# eval "$(pyenv init --path)"
-# eval "$(pyenv init -)"
-
-# if which pyenv-virtualenv-init > /dev/null; then
-#   eval "$(pyenv virtualenv-init -)"
-#   export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-# fi
-
-# [[ -s ~/.gvm/scripts/gvm ]] && source ~/.gvm/scripts/gvm
-
 # Macos Config
 if [[ $(uname) == "Darwin" ]]; then
   export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
@@ -51,6 +39,9 @@ if [[ $(uname) == "Darwin" ]]; then
 
   # To make sure it is using the right version of java
   export PATH="/usr/local/opt/openjdk/bin:$PATH"
+
+  # add composer to the path
+  export PATH="$HOME/.composer/vendor/bin:$PATH"
 fi
 
 # Linux config
