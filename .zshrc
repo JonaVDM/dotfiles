@@ -97,4 +97,7 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+# laravel sail
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
