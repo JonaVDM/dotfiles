@@ -23,11 +23,6 @@ compinit
 
 export EDITOR=nvim
 
-# NVM
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
 # Macos Config
 if [[ $(uname) == "Darwin" ]]; then
   export JAVA_HOME="/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
@@ -89,6 +84,10 @@ alias cl="clear"
 alias yolo='git add --all && git commit -m "$(curl --fail --silent https://whatthecommit.com/index.txt)"'
 
 alias git-count='git ls-files | while read f; do git blame --line-porcelain $f | grep "^author "; done | sort -f | uniq -ic | sort'
-alias git-clean='g4it fetch -p ; git branch -r | awk "{print $1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print $1}" | xargs git branch -d'
+alias git-clean='git fetch -p; git branch -r | awk "{print $1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print $1}" | xargs git branch -d'
+
+# laravel sail alias
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+alias lara='docker compose exec app php artisan'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
