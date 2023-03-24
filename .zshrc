@@ -90,4 +90,11 @@ alias git-clean='git fetch -p; git branch -r | awk "{print $1}" | egrep -v -f /d
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias lara='docker compose exec app php artisan'
 
+# pnpm
+export PNPM_HOME="$HOME/.pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
