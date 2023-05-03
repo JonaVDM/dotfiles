@@ -50,6 +50,11 @@ fi
 
 bindkey -s ^f "bash ~/.dotfiles/scripts/tmux-switcher.sh\n"
 
+bindkey -s '\e[20;5~' "bash ~/.dotfiles/scripts/tmux-switcher.sh ~/Code\n"         # F9
+bindkey -s '\e[21;5~' "bash ~/.dotfiles/scripts/tmux-switcher.sh ~/School\n"       # F10
+bindkey -s '\e[23;5~' "bash ~/.dotfiles/scripts/tmux-switcher.sh ~/.dotfiles\n"    # F11
+bindkey -s '\e[24;5~' "bash ~/.dotfiles/scripts/tmux-switcher.sh ~/.config/nvim\n" # F12
+
 if command -v go &> /dev/null; then
   export PATH="$(go env GOPATH)/bin:$PATH"
 fi
