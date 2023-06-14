@@ -37,6 +37,9 @@ if [[ $(uname) == "Darwin" ]]; then
 
   # add composer to the path
   export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+  # Because brew installs the 20, not 18
+  export PATH="/usr/local/opt/node@18/bin:$PATH"
 fi
 
 # Linux config
@@ -92,7 +95,8 @@ alias cl="clear"
 alias yolo='git add --all && git commit -m "$(curl --fail --silent https://whatthecommit.com/index.txt)"'
 
 alias git-count='git ls-files | while read f; do git blame --line-porcelain $f | grep "^author "; done | sort -f | uniq -ic | sort'
-alias git-clean='git fetch -p; git branch -r | awk "{print $1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print $1}" | xargs git branch -d'
+# alias git-clean='git fetch -p; git branch -r | awk "{print $1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print $1}" | xargs git branch -d'
+alias git-clean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 
 # laravel sail alias
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
