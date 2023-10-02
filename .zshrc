@@ -49,6 +49,7 @@ if [[ $(uname) == "Linux" ]]; then
 
   export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
   export PATH="$PATH:$GEM_HOME/bin"
+  export ANDROID_HOME="/home/jona/Android/Sdk"
 fi
 
 bindkey -s ^f "sh ~/.dotfiles/scripts/tmux-switcher.sh\n"
@@ -77,6 +78,7 @@ alias glog='git log --oneline --decorate --graph'
 alias glg='git log --stat'
 alias gst='git status'
 alias gch='git checkout'
+alias gfgl='git fetch && git pull'
 alias clean='git reset --hard && git clean -f'
 alias ls='ls --color=auto'
 alias lsa='ls -lah'
@@ -84,7 +86,7 @@ alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
 alias dcd='docker compose down'
-alias dcu='docker compose up --build'
+alias dcu='docker compose up --build -d'
 alias dce='docker compose exec'
 alias dcl='docker compose logs'
 alias v='nvim'
@@ -92,7 +94,7 @@ alias pm="pnpm"
 alias cl="clear"
 
 # never actually use it, unless you're done with your teammates
-alias yolo='git add --all && git commit -m "$(curl --fail --silent https://whatthecommit.com/index.txt)"'
+alias yolo='git add --all && git commit -m "$(curl --fail --silent https://whatthecommit.com/index.txt)" && git push'
 
 alias git-count='git ls-files | while read f; do git blame --line-porcelain $f | grep "^author "; done | sort -f | uniq -ic | sort'
 # alias git-clean='git fetch -p; git branch -r | awk "{print $1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print $1}" | xargs git branch -d'
