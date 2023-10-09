@@ -53,6 +53,7 @@ if [[ $(uname) == "Linux" ]]; then
 fi
 
 bindkey -s ^f "sh ~/.dotfiles/scripts/tmux-switcher.sh\n"
+bindkey -s ^e "activate\n"
 
 bindkey -s '\e[20;5~' "sh ~/.dotfiles/scripts/tmux-switcher.sh ~/Code\n"         # F9
 bindkey -s '\e[21;5~' "sh ~/.dotfiles/scripts/tmux-switcher.sh ~/School\n"       # F10
@@ -110,6 +111,20 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+activate() {
+    if [[ $# -eq 1 ]]; then
+        selected=$1
+    else
+        selected=$(find ~/.venv -mindepth 1 -maxdepth 1 -type d | fzf)
+    fi
+    source $selected/bin/activate
+    tmux setenv VIRTUAL_ENV $VIRTUAL_ENV
+}
+
+if [ -n "$VIRTUAL_ENV" ]; then
+  activate $VIRTUAL_ENV
+fi
 
 # laravel sail
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
