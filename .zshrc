@@ -113,13 +113,13 @@ case ":$PATH:" in
 esac
 
 activate() {
-    if [[ $# -eq 1 ]]; then
-        selected=$1
-    else
-        selected=$(find ~/.venv -mindepth 1 -maxdepth 1 -type d | fzf)
-    fi
-    source $selected/bin/activate
-    tmux setenv VIRTUAL_ENV $VIRTUAL_ENV
+  if [[ $# -eq 1 ]]; then
+    selected=$1
+  else
+    selected=$(find ~/.venv -mindepth 1 -maxdepth 1 -type d | fzf)
+  fi
+  source $selected/bin/activate
+  tmux setenv VIRTUAL_ENV $VIRTUAL_ENV
 }
 
 if [ -n "$VIRTUAL_ENV" ]; then
