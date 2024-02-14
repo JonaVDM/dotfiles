@@ -10,6 +10,8 @@ fi
 source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 zplugin ice depth=1
 zinit light zsh-users/zsh-autosuggestions
@@ -87,9 +89,11 @@ alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
 alias dcd='docker compose down'
-alias dcu='docker compose up --build -d'
+alias dcu='docker compose up --build'
+alias dcud='docker compose up --build -d'
 alias dce='docker compose exec'
 alias dcl='docker compose logs'
+alias dcw='docker compose watch'
 alias v='nvim'
 alias pm="pnpm"
 alias cl="clear"
@@ -130,3 +134,4 @@ fi
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+[[ ! -f /usr/share/nvm/init-nvm.sh ]] || source /usr/share/nvm/init-nvm.sh
