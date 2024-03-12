@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Zinit stuff
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
     print -P "%F{33} %F{220}Installing %F{33}ZDHARMA-CONTINUUM%F{220} Initiative Plugin Manager (%F{33}zdharma-continuum/zinit%F{220})…%f"
@@ -20,6 +27,11 @@ zinit light zsh-users/zsh-syntax-highlighting
 
 zinit light zsh-users/zsh-completions
 zinit light felixr/docker-zsh-completion
+
+export ZSH_FZF_HISTORY_SEARCH_FZF_EXTRA_ARGS='--height 20'
+zinit ice lucid wait'0'
+zinit light joshskidmore/zsh-fzf-history-search
+
 autoload -Uz compinit
 compinit
 
@@ -93,10 +105,11 @@ alias dcu='docker compose up --build'
 alias dcud='docker compose up --build -d'
 alias dce='docker compose exec'
 alias dcl='docker compose logs'
-alias dcw='docker compose watch'
+alias dcw='docker compose up --watch'
 alias v='nvim'
 alias pm="pnpm"
 alias cl="clear"
+alias kc="kubectl"
 
 # never actually use it, unless you're done with your teammates
 alias yolo='git add --all && git commit -m "$(curl --fail --silent https://whatthecommit.com/index.txt)" && git push'

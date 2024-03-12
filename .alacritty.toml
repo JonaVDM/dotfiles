@@ -1,6 +1,5 @@
 [font]
 normal = { family = "Hack Nerd Font", style="Regular" }
-offset = { y = 4}
 
 [env]
 TERM = "xterm-256color"
