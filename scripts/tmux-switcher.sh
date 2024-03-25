@@ -5,7 +5,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~ ~/School ~/Code -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/Code -mindepth 1 -maxdepth 5 -type d -name '.git' -exec dirname {} \; | fzf)
 fi
 
 if [[ -z $selected ]]; then
