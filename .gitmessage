@@ -1,0 +1,37 @@
+
+# == title == ----------------------- (max size) #
+
+# (leave line above empty)
+# == body == -------------------------------------------------- (wrap) #
+
+# footer
+# Issue:
+
+# the commits must follow the conventional commits structure
+# title must start with a lowercase letter, and NOT end a [.?!]
+#
+# feat:     add new feature
+# fix:      some bug
+# ci:       update/add to the ci/cd config
+# chore:    update depedency, drop support etc
+# docs:     update documentation only
+# test:     update or add missing test
+# build:    update to the build system
+# perf:     change that improves performance
+# refactor: change that is neither `feat`, `fix` or `perf`
+# revert:   rollback a feature
+#
+# scope can be added with (scope). e.g.: 
+# `chore(deps): update package testify`
+# when making use of scopes, a list of scope should be defined in 
+# the documentation of the project
+#
+# `!` is for breaking changes. e.g: `chore!: drop support for api v1`
+# 
+# more information can be found at: 
+# https://www.conventionalcommits.org/en/v1.0.0
+#
+# to add this as the template for git commits:
+# ```bash
+# git config --global commit.template ~/.gitmessage
+# ```
