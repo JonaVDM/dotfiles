@@ -115,12 +115,19 @@ alias kc="kubectl"
 alias yolo='git add --all && git commit -m "$(curl --fail --silent https://whatthecommit.com/index.txt)" && git push'
 
 alias git-count='git ls-files | while read f; do git blame --line-porcelain $f | grep "^author "; done | sort -f | uniq -ic | sort'
-# alias git-clean='git fetch -p; git branch -r | awk "{print $1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print $1}" | xargs git branch -d'
-alias git-clean='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+
+# Warning, this commands deletes pretty much everything. Ran into a lot of
+# problems when gitlab decided my MR needed to be rebased. This command deletes
+# all local branches except the current branch. Needles to say, you should
+# probably never need or use this.
+alias git-clean='git branch | grep -v "*" | xargs git branch -d'
 
 # laravel sail alias
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias lara='docker compose exec app php artisan'
+
+# Quicker go things
+alias gotest='go test ./...'
 
 # pnpm
 export PNPM_HOME="$HOME/.pnpm"
@@ -128,6 +135,9 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+
+# Zoxide
+eval "$(zoxide init zsh)"
 
 activate() {
   if [[ $# -eq 1 ]]; then
