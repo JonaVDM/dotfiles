@@ -122,6 +122,9 @@ alias git-count='git ls-files | while read f; do git blame --line-porcelain $f |
 # probably never need or use this.
 alias git-clean='git branch | grep -v "*" | xargs git branch -d'
 
+# When cloning with `--bare`, sometimes it doesn't include this for some odd reason
+alias git-fix='git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"'
+
 # laravel sail alias
 alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 alias lara='docker compose exec app php artisan'
@@ -158,3 +161,27 @@ alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 [[ ! -f /usr/share/nvm/init-nvm.sh ]] || source /usr/share/nvm/init-nvm.sh
+
+autoload -U +X bashcompinit && bashcompinit
+
+_az_python_argcomplete() {
+    local IFS=$'\013'
+    local SUPPRESS_SPACE=0
+    if compopt +o nospace 2> /dev/null; then
+        SUPPRESS_SPACE=1
+    fi
+    COMPREPLY=( $(IFS="$IFS" \
+                  COMP_LINE="$COMP_LINE" \
+                  COMP_POINT="$COMP_POINT" \
+                  COMP_TYPE="$COMP_TYPE" \
+                  _ARGCOMPLETE_COMP_WORDBREAKS="$COMP_WORDBREAKS" \
+                  _ARGCOMPLETE=1 \
+                  _ARGCOMPLETE_SUPPRESS_SPACE=$SUPPRESS_SPACE \
+                  "$1" 8>&1 9>&2 1>/dev/null 2>/dev/null) )
+    if [[ $? != 0 ]]; then
+        unset COMPREPLY
+    elif [[ $SUPPRESS_SPACE == 1 ]] && [[ "$COMPREPLY" =~ [=/:]$ ]]; then
+        compopt -o nospace
+    fi
+}
+complete -o nospace -o default -o bashdefault -F _az_python_argcomplete "az"
