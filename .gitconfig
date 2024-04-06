@@ -1,9 +1,12 @@
 [user]
 	name = Jonathan
-	email = 32264711+JonaVDM@users.noreply.github.com
+	; email = 32264711+JonaVDM@users.noreply.github.com
+  email = jonajvdm@gmail.com
 [core]
 	editor = vim
 [init]
 	defaultBranch = main
 [push]
 	autoSetupRemote = true
+[commit]
+	template = /home/jona/.dotfiles/.gitmessage
